@@ -11,14 +11,9 @@ function App() {
   useEffect(() => {
     Users();
   }, []);
-  const handle = () => {
-    console.log(user);
-  };
 
   return (
     <div className="app">
-      <h1 onClick={handle}>Linkedin Post </h1>
-
       <div className="post">
         {user.map((user) => {
           return (
