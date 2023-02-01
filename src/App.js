@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useEffect, useState } from "react";
+import axios from "axios";
+import ListCardView from "./ListCardView";
+import "./App.css";
 function App() {
+  const [user, setUser] = useState([]);
+  const apiUrl = `https://api.github.com/users`;
+  const Users = async () => {
+    const results = await axios.get(apiUrl).then((res) => setUser(res.data));
+  };
+  useEffect(() => {
+    Users();
+  }, []);
+  const handle = () => {
+    console.log(user);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1 onClick={handle}>Linkedin Post </h1>
+
+      <div className="post">
+        {user.map((user) => {
+          return (
+            <>
+              <ListCardView profile={user.avatar_url} login={user.login} />
+            </>
+          );
+        })}
+      </div>
     </div>
   );
 }
