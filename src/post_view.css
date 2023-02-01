@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Poppins&family=Ubuntu:ital@1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abel&family=Oxygen:wght@700&family=Poppins&family=Ubuntu:ital@1&display=swap");
 .view {
-  background-color: whitesmoke;
+  background-color: #ebf6f7;
   width: 25%;
 
   margin: 2%;
@@ -34,7 +34,7 @@
   font-size: 17px;
 }
 #bio {
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Abel", sans-serif;
 }
 .content {
