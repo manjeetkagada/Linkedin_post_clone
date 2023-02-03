@@ -12,15 +12,12 @@ const ListCardView = ({ profile, login }) => {
     <div className="view">
       <div className="header">
         <div className="profile">
-          <img src={profile} alt="image" className="profile_image" />
+          <img src={profile} alt="profile_image" className="profile_image" />
         </div>
         <div className="title_info">
           <span>{login} . 1st</span>
           <span id="bio">BlockChain | Author | CEO </span>
         </div>
-        {/* <div className="more_info">
-          <MoreHorizIcon className="info" />
-        </div> */}
       </div>
 
       <div className="content">
@@ -39,13 +36,6 @@ const ListCardView = ({ profile, login }) => {
           className="image__content"
         />
       </div>
-
-      {/* <div className="interactions_info">
-        <div className="right">
-          <p>2008</p>
-        </div>
-        <div className="left"></div>
-      </div> */}
 
       <hr />
 

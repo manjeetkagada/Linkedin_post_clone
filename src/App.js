@@ -6,7 +6,7 @@ function App() {
   const [user, setUser] = useState([]);
   const apiUrl = `https://api.github.com/users`;
   const Users = async () => {
-    const results = await axios.get(apiUrl).then((res) => setUser(res.data));
+    await axios.get(apiUrl).then((res) => setUser(res.data));
   };
   useEffect(() => {
     Users();
