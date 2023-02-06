@@ -5,7 +5,6 @@ import ThumbUpAltOutlinedIcon from "@mui/icons-material/ThumbUpAltOutlined";
 import CommentOutlinedIcon from "@mui/icons-material/CommentOutlined";
 import CachedOutlinedIcon from "@mui/icons-material/CachedOutlined";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
-import { Login } from "@mui/icons-material";
 
 const ListCardView = ({ profile, login }) => {
   return (
